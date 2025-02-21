@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled, { createGlobalStyle } from "styled-components";
+import Card from "./components/Card"; // Import your Card component
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #ffffff; /* White background */
+    margin: 0; /* Remove default margins */
+    font-family: sans-serif; /* Example font */
+  }
+  #root { /* Target the root div */
+    height: 100vh; /* Make sure background covers the entire viewport */
+  }
+`;
+
+const AppContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GlobalStyle /> {/* Include the global style */}
+      <AppContainer>
+        <Card
+          title="My Card"
+          description="Card description"
+          imageUrl="https://robohash.org/po"
+          size="medium"
+        />
+      </AppContainer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
