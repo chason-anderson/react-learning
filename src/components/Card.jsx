@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Button from "./Button";
 
 const CardContainer = styled.div`
   border: 1px solid #ccc;
@@ -47,13 +48,14 @@ const CardDescription = styled.p`
   color: #666;
 `;
 
-function Card({ title, description, imageUrl, onClick, size = "medium" }) {
+function Card({ title, description, imageUrl, onClick, size }) {
   return (
     <CardContainer size={size} onClick={onClick}>
       {imageUrl && <CardImage src={imageUrl} alt={title} />}
       <CardContent>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
+        <Button>Click Me</Button>
       </CardContent>
     </CardContainer>
   );

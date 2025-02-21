@@ -28,7 +28,7 @@ function App() {
           title="My Card"
           description="Card description"
           imageUrl="https://robohash.org/po"
-          size="medium"
+          size="small"
         />
       </AppContainer>
     </>
