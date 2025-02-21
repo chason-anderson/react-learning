@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const ButtonContainer = styled.button`
-  background-color: #007bff;
-  color: white;
+const StyledButton = styled.button`
+  background-color: rgb(82, 109, 130);
+  color: rgb(221, 230, 237);
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -12,12 +12,12 @@ const ButtonContainer = styled.button`
   transition: background-color 0.2s;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: rgb(157, 178, 191);
   }
 `;
 
 function Button({ children, onClick }) {
-  return <ButtonContainer onClick={onClick}>{children}</ButtonContainer>;
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 }
 
 Button.propTypes = {

@@ -1,14 +1,14 @@
 import styled, { createGlobalStyle } from "styled-components";
-import Card from "./components/Card"; // Import your Card component
+import Card from "./components/Card";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #ffffff; /* White background */
-    margin: 0; /* Remove default margins */
-    font-family: sans-serif; /* Example font */
+    background-color: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
   }
-  #root { /* Target the root div */
-    height: 100vh; /* Make sure background covers the entire viewport */
+  #root {
+    height: 100vh;
   }
 `;
 
@@ -22,13 +22,13 @@ const AppContainer = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle /> {/* Include the global style */}
+      <GlobalStyle />
       <AppContainer>
         <Card
           title="My Card"
           description="Card description"
           imageUrl="https://robohash.org/po"
-          size="small"
+          size="medium"
         />
       </AppContainer>
     </>
